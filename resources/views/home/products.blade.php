@@ -35,23 +35,22 @@
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between bg-light border">
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    {{-- <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a> --}}
-                    <form action="{{url('add_cart',$products->id)}}" method="POST">
+                    <a href="{{url('product_details', $products->id)}}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Details</a>
+                   
+
+                    <form action="{{url('add_cart',$products->id)}}" method="Post">
                         @csrf
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="">
+                                
                                 <input type="number" name="quantity" value="1" min="1" style="width: 100px">
+                                {{-- <a href = "" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a> --}}
 
                             </div>
                             <div class="col-md-4"><br><br>
-
-
-
                                 <input type="submit" value="Add to cart" >
-
                             </div>
-                        </div>
+                        </div> 
                     </form>
                 </div>
             </div>
