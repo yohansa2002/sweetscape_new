@@ -108,7 +108,7 @@
         <div>
             <h1 style = " padding-bottom: 15px;"> Procced to Checkout</h1>
             <a href="{{url('cash_order')}}" class = "btn btn-danger"> Cash On Delivery</a>
-            <a href="" class = "btn btn-danger"> Pay with Card </a>
+            <a href="{{url('stripe',$totalprice)}}" class = "btn btn-danger"> Pay with Card </a>
         </div>
     
     </div>
