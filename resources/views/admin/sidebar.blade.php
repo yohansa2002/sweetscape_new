@@ -53,6 +53,15 @@
           </div>
         </div>
       </li>
+
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{url('/redirect')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">Dashboard</span>
+        </a>
+      </li>
       
 
       <li class="nav-item menu-items">
@@ -81,7 +90,7 @@
           <span class="menu-title">Category</span>
         </a>
       </li>
-      
+
       <li class="nav-item menu-items">
         <a class="nav-link" href="{{url('order')}}">
           <span class="menu-icon">

@@ -130,6 +130,7 @@
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="{{url('show_order')}}" class="nav-item nav-link">Order</a>
                         </div>
         
                         @if(Auth::check())
