@@ -30,8 +30,8 @@
     }
     .img_size
     {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         padding: 3px;
 
     }
@@ -52,13 +52,25 @@
 
             <h1 class="title_deg">All Orders</h1>
 
+        <div style="padding: 30px; padding-left:600px; ">
+
+            <form action="{{url('search')}}" method="get">
+
+                @csrf
+
+                <input type ="text" style="color: black" name="search" placeholder="Search for something">
+                <input type="submit" value="Search" class="btn btn-outline-primary">
+            </form>
+        </div>
+
             <table class="table_deg">
                 <tr class ="th_deg">
                     {{-- <th>Order Id</th> --}}
+                    <th>Customer ID </th>
                     <th>Customer Name</th>
-                    <th>Customer Phone</th>
                     <th>Customer Email</th>
                     <th>Customer Address</th>
+                    <th>Customer Phone</th>
                     <th>Product</th>
                     <th>Qunatity</th>
                     <th>Price</th>
@@ -66,11 +78,14 @@
                     <th>Delivery Status</th>
                     <th>Image</th>
                     <th>Delivered</th>
+                    <th>Print PDF</th>
+                    <th>Send Email</th>
                 </tr>
 
-                @foreach($order as $order)
+                @forelse($order as $order)
                 <tr>
                     {{-- <th>Order Id</th> --}}
+                    <td>{{$order->user_id}}</td>
                     <td>{{$order->name}}</td>
                     <td>{{$order->email}}</td>
                     <td>{{$order->address}}</td>
@@ -92,8 +107,21 @@
 
                         @endif
                     </td>
+                    <td>
+                        <a href="" class="btn btn-primary"> Print PDF</a>
+                    </td>
+                    <td>
+                        <a href="{{url('send_email',$order->id)}}" class="btn btn-primary"> Send Email</a>
+                    </td>
                 </tr>
-                @endforeach
+
+                @empty
+
+                <tr>
+                    <td colspan="16"> No Data Found </td> 
+                </tr>
+
+                @endforelse
             </table>
         </div>
         </div>

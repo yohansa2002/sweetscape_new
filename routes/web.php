@@ -42,6 +42,11 @@ Route::get('/update_product/{id}',[AdminController::class,'update_product']);
 Route::post('/update_product_confirm/{id}',[AdminController::class,'update_product_confirm']);
 Route::get('/order',[AdminController::class,'order']);
 Route::get('/delivered/{id}',[AdminController::class,'delivered']);
+Route::get('/send_email/{id}',[AdminController::class,'send_email']);
+Route::post('/send_user_email/{id}',[AdminController::class,'send_user_email']);
+Route::get('/search',[AdminController::class,'searchdata']);
+
+
 
 
 Route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
