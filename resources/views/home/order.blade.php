@@ -37,13 +37,16 @@
         }
         table,th,td
         {
-            border:1px solid rgb(92, 91, 91);
+            border: 2px solid pink;
+            border-collapse: collapse;
+            padding:5px;
             
         }
         .th_deg
         {
-            background-color: rgb(230, 154, 196);
-            padding:10px;
+            font-size:20px;
+            padding:5px;
+            background:pink;
 
         }
         </style>
@@ -90,7 +93,7 @@
                
 
                 <a onclick="return confirm('Are you sure to caancel this order !!!')" 
-                href="{{url('cancel_order', $order->id)}}" class="btn btn-sm btn-primary">
+                href="{{url('cancel_order', $order->id)}}"  class="btn btn-sm btn-primary">
                 <i class="fa fa-times"></a></i></button>
 
               @else

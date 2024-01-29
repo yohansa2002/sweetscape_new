@@ -36,13 +36,13 @@
             </a>
         </div>
         <div class="col-lg-6 col-6 text-left">
-            <form action="">
+            <form action="{{url('product_search')}}" method="GET">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for products">
-                    <div class="input-group-append">
-                        <span class="input-group-text bg-transparent text-primary">
-                            <i class="fa fa-search"></i>
-                        </span>
+                    <input type="text" class="form-control" name="search" placeholder="Search for products">
+                    <div>
+                        {{-- <span class="input-group-text bg-transparent text-primary"> --}}
+                            <button class="btn btn-primary" type="button"> <i class="fa fa-search"></i></button>
+                        {{-- </span> --}}
                     </div>
                 </div>
             </form>
@@ -111,9 +111,9 @@
         <div class="container justify-content-center">
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
+                    {{-- <a href="" class="text-decoration-none d-block d-lg-none">
                         <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
-                    </a>
+                    </a> --}}
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -129,10 +129,10 @@
                                     <a href="checkout.html" class="dropdown-item">Checkout</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="{{url('/chat')}}" class="nav-item nav-link">Chat</a>
                             <a href="{{url('show_order')}}" class="nav-item nav-link">Order</a>
                         </div>
-        
+       
                         @if(Auth::check())
                             <div class="col-lg-3 col-6 text-right">
                                 <a href="" class="btn border">
@@ -141,7 +141,11 @@
                                 </a>
                                 <a href="{{url('show_cart')}}" class="btn border">
                                     <i class="fas fa-shopping-cart text-primary"></i>
-                                    <span class="badge">0</span>
+                                    @if(isset($cart))
+                                        @if($cart)
+                                            <span class="badge">{{ count($cart) }}</span>
+                                        @endif
+                                    @endif
                                 </a>
                             </div>
                         @endif

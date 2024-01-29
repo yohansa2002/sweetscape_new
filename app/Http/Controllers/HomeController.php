@@ -20,8 +20,10 @@ class HomeController extends Controller
     }
     public function redirect()
     {
+
         $usertype=Auth::user()->usertype;
 
+       
         if($usertype=='1')
         {
             $total_product = product ::all()->count();
@@ -50,9 +52,11 @@ class HomeController extends Controller
 
         else
         {
-            $product=Product::paginate(4);
-            return view('home.userpage',compact('product'));
-            // return view ('dashboard');
+            $product = Product::paginate(4);
+            $id = Auth::user()->id;
+            $cart = Cart::where('user_id', '=', $id)->get();
+
+            return view('home.userpage', compact('product', 'cart'));
         }
         }
 
@@ -154,7 +158,7 @@ class HomeController extends Controller
 
             }
 
-            return redirect()->back()->with('message','Order placed successfully');
+            return redirect('/checkout')->with('message', 'Order placed successfully');
 
         }
 
@@ -250,6 +254,21 @@ class HomeController extends Controller
             $order->save();
             return redirect()->back()->with('message','Order cancelled successfully');
         }
+
+        public function product_search(Request $request)
+        {
+            $search_text = $request->search;
+            $product=product::where('title','LIKE','%$search_text%')->get();
+            return view('home.userpage',compact('product'));
+        }
+
+        public function checkout ()
+        {
+            
+            return view('home.checkout');
+
+        }
+
     }
        
     

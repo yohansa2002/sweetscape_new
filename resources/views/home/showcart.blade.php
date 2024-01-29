@@ -32,13 +32,13 @@
         text-align: center
     }
     table,th,td{
-        border: 1px solid grey;
+        border: 2px solid pink;
         border-collapse: collapse;
         padding:5px;
     }
     .th_deg
     {
-        font-size:28px;
+        font-size:20px;
         padding:5px;
         background:pink;
 
@@ -75,39 +75,49 @@
     
 
     <div class="center">
-        <table>
-            <tr>
-                <th class="th_deg">Product Title</th>
-                <th class="th_deg">Product Quantity</th>
-                <th class="th_deg">Price</th>
-                <th class="th_deg">Image</th>
-                <th class="th_deg">Action</th>
+        @php
+        $totalprice=0; 
+        @endphp
+
+        @if(count($cart) > 0)
+            <table>
+                <tr>
+                    <th class="th_deg">Product Title</th>
+                    <th class="th_deg">Product Quantity</th>
+                    <th class="th_deg">Price</th>
+                    <th class="th_deg">Image</th>
+                    <th class="th_deg">Action</th>
+                </tr>
                 
+                @foreach ($cart as $cart)
+                <tr>
+                    <td>{{$cart-> product_title}}</td>
+                    <td>{{$cart-> quantity}}</td>
+                    <td>LKR {{$cart-> price}}.00  </td>
+                    <td><img class="img_deg" src="/product/{{$cart->image}}"></td>
+                    <td><a class ="btn btn-danger" onclick="return confirm ('Are you sure to remove this product ?')" 
+                        href ="{{url('remove_cart', $cart->id)}}"> Remove </a></td>
+                </tr> 
+                @php
+                $totalprice = $totalprice+ $cart->price;
+                @endphp
+                @endforeach
+            </table>
 
-            </tr>
-            <?php $totalprice=0; ?>
-            @foreach ($cart as $cart)
-            <tr>
-                <td>{{$cart-> product_title}}</td>
-                <td>{{$cart-> quantity}}</td>
-                <td>LKR {{$cart-> price}}.00  </td>
-                <td><img class="img_deg" src="/product/{{$cart->image}}"></td>
-                <td><a class ="btn btn-danger" onclick="return confirm ('Are you sure to remove this product ?')" 
-                    href ="{{url('remove_cart', $cart->id)}}"> Remove </a></td>
+@else
+<h2> No items in the cart </h2>
 
-            </tr> 
-            <?php $totalprice = $totalprice+ $cart->price ; ?> 
-            @endforeach
-            {{-- {{$totalprice}} --}}
-        </table>
+        @endif
+
         <div>
             <h1 class="total_deg"> Total Price: LKR {{$totalprice}}.00</h1>
-
         </div>
+       
 
         <div>
             <h1 style = " padding-bottom: 15px;"> Procced to Checkout</h1>
-            <a href="{{url('cash_order')}}" class = "btn btn-danger"> Cash On Delivery</a>
+            {{-- <a href="{{url('cash_order')}}" class = "btn btn-danger"> Cash On Delivery</a> --}}
+            <a href="{{url('checkout')}}" class = "btn btn-danger"> Cash On Delivery</a>
             <a href="{{url('stripe',$totalprice)}}" class = "btn btn-danger"> Pay with Card </a>
         </div>
     
