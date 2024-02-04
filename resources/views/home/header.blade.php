@@ -120,17 +120,18 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="{{url('/')}}" class="nav-item nav-link active">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Shop</a>
-                            <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
+                            <a href="shop.html" class="nav-item nav-link">Recipes & Ideas</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                                    <a href="checkout.html" class="dropdown-item">Checkout</a>
+                                    <a href="cart.html" class="dropdown-item">Cakes</a>
+                                    <a href="checkout.html" class="dropdown-item">Sweets</a>
+                                    <a href="checkout.html" class="dropdown-item">Bakery Equipments</a>
                                 </div>
                             </div>
                             <a href="{{url('/chat')}}" class="nav-item nav-link">Chat</a>
                             <a href="{{url('show_order')}}" class="nav-item nav-link">Order</a>
+                            <a href="{{url('/contact')}}" class="nav-item nav-link">About us </a>
                         </div>
        
                         @if(Auth::check())

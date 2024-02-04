@@ -33,6 +33,7 @@ Route::middleware([
 });
 
 Route::get('/redirect',[HomeController::class,'redirect'])-> middleware('auth','verified');
+
 Route::get('/view_category',[AdminController::class,'view_category']);
 Route::post('/add_category',[AdminController::class,'add_category']);
 Route::get('/delete_category/{id}',[AdminController::class,'delete_category']);   //when user click on delete id it will cache the id and in the delete category function
@@ -51,6 +52,8 @@ Route::get('/search',[AdminController::class,'searchdata']);
 
 
 
+
+
 Route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
 Route::get('/product_details/{id}',[HomeController::class,'product_details']);
 Route::get('/show_cart',[HomeController::class,'show_cart']);
@@ -62,6 +65,7 @@ Route::post('stripe/{totalprice}',[HomeController::class, 'stripePost'])->name('
 Route::get('/show_order',[HomeController::class,'show_order']);
 Route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
 Route::get('/product_search',[HomeController::class,'product_search']);
+Route::get('/contact',[HomeController::class,'contact']);
 
 Route::get('/chat', [OpenAIController::class, 'index']);
 Route::post('/chat', [OpenAIController::class, 'getResponse']);
