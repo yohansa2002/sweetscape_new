@@ -8,7 +8,7 @@
                     
                 <h1 class="mb-4 font-weight-semi-bold">Christmas Collection</h1>
                 <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
-                    <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                    {{-- <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a> --}}
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
                     
                     <h1 class="mb-4 font-weight-semi-bold">Event Collections</h1>
                     <h5 class="text-uppercase text-primary mb-3">Any order placed 10 days prior to your wedding will be awarded a 10% discount</h5>
-                    <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                    {{-- <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a> --}}
                 </div>
             </div>
         </div>

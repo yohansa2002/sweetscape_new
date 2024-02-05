@@ -53,6 +53,8 @@
             .about_us
             {
                 text-align: center;
+                color:rgb(250, 122, 143);
+                
             }
             
             </style>
@@ -69,7 +71,7 @@
             <div class="about_us">
                 <h5 class="font-weight-semi-bold mb-3">About Sweetscape
                 </h5>
-                <p>
+                <p >
                     
 
                     Welcome to Sweetscape, where passion meets sweetness! Established in 2002, Sweetscape has been delighting taste buds since our inception.

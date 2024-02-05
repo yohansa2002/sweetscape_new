@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OpenAIController;
+use App\Http\Controllers\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,11 @@ Route::get('/show_order',[HomeController::class,'show_order']);
 Route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
 Route::get('/product_search',[HomeController::class,'product_search']);
 Route::get('/contact',[HomeController::class,'contact']);
+Route::get('/shop',[HomeController::class,'shop']);
 
 Route::get('/chat', [OpenAIController::class, 'index']);
 Route::post('/chat', [OpenAIController::class, 'getResponse']);
+
+
+Route::get('/subscribe_form', [HomeController::class, 'subscribe_form']);
+Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');

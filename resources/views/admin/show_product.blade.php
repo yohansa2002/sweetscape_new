@@ -49,6 +49,10 @@
         background: rgb(243, 164, 235)
       }
 
+      .content-wrapper {
+    background-color: #3d3a3a; /* Light gray background color */
+  }
+
 
     </style>
 

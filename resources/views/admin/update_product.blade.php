@@ -35,6 +35,10 @@
             padding-bottom: 15px;
         }
 
+        .content-wrapper {
+    background-color:  #3d3a3a; /* Light gray background color */
+  }
+
     </style>
 
   </head>

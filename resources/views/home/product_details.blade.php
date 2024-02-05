@@ -34,58 +34,59 @@
     @include('home.header')
 
     {{-- {{$product->title}} --}}
-    <div class="col-lg-3 col-md-6 col-sm-12 pb-1" style="margin: auto; width:50%; padding:30px">
-        <div class="card product-item border-0 mb-4">
-            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                <img class="img-fluid w-100" style= "padding 20px" src="product/{{$product->image}}" alt="">
-            </div>
-            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                <h6 class="text-truncate mb-3">{{$product->title}}</h6>
-                <div class="d-flex justify-content-center">
-
-                    @if ($product->discount_price!=null)
-                        
-                    <h6 style="white-space: nowrap; color:rgb(243, 47, 128)">Price <br>Rs.{{$product->discount_price}}</h6>
-
-                    <h6 style="text-decoration:line-through; color:rgb(3, 3, 3)"> Price<br>
-                        Rs.{{$product->price}}</h6>
-
-                    @else
-
-                    <h6 style="color:rgb(0, 0, 0) ">Price<br> Rs.{{$product->price}}</h6>
+    <!-- Topbar Start -->
 
 
-                    @endif
-    
+{{-- {{$product->title}} --}}
+
+<div class="col-lg-6 col-md-12 col-sm-12 mx-auto p-3">
+    <div class="card product-item border-0 mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <img class="img-fluid w-100" style="padding: 20px;" src="product/{{$product->image}}" alt="">
                 </div>
-                <h6 > Product Category : {{$product->category}}</h6>
-                <h6 > Product Details : {{$product->descritpion}}</h6>
-                <h6 > Available Quantity : {{$product->quantity}}</h6>
-
-                {{-- <a href = "{{url('add_cart',$product->id)}}" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a> --}} 
-
-                <form action="{{url('add_cart',$product->id)}}" method="Post">
-                    @csrf
-                    <div class="row">
-                        <div class="">
-                            
-                            <input type="number" name="quantity" value="1" min="1" style="width: 100px">
-                            {{-- <a href = "" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a> --}}
-
-                        </div>
-                        <div class="col-md-4"><br><br>
-                            <input type="submit" value="Add to cart" >
-                        </div>
-                    </div> 
-                </form>
             </div>
-            <div class="card-footer d-flex justify-content-between bg-light border">
-                {{-- <a href="{{url('product_details',$product->id)}}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a> --}}
-                {{-- <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a> --}}
-                
+            <div class="col-md-6">
+                <div class="card-body text-center p-0 pt-4 pb-3">
+                    <h2 class="text-truncate mb-3">{{$product->title}}</h2>
+                    <div class="d-flex justify-content-center">
+                        @if ($product->discount_price!=null)
+                            <h6 style="white-space: nowrap; color:rgb(243, 47, 128)">Price <br>Rs.{{$product->discount_price}}</h6> <br>
+                            <h6 style="text-decoration:line-through; color:rgb(3, 3, 3)"> Price<br> Rs.{{$product->price}}</h6> <br>
+                        @else
+                            <h6 style="color:rgb(0, 0, 0) ">Price<br> Rs.{{$product->price}}</h6>
+                        @endif
+                    </div>
+                    <h6 > Product Category : {{$product->category}}</h6>
+                    <h6 > Product Details : {{$product->descritpion}}</h6>
+                    <h6 > Available Quantity : {{$product->quantity}}</h6>
+
+                    <form action="{{url('add_cart',$product->id)}}" method="Post">
+                        @csrf
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 text-center">
+                                <div class="mb-2">
+                                    <label for="quantity">No of Quantity:</label>
+                                    <input type="number" name="quantity" value="1" min="1" style="width: 100px">
+                                </div>
+                                <div>
+                                    <input type="submit" style="background-color: rgb(218, 133, 147); color:#ffffff;" value="Add to cart">
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </form>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    {{-- Add any additional footer content here --}}
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
                 
     <!-- Footer Start -->
     @include('home.footer')

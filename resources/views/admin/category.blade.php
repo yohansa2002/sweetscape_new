@@ -26,7 +26,12 @@
         text-align: center;
         margin-top: 30px;
         border: 3px solid white;
+        
     }
+
+    .content-wrapper {
+    background-color:  #3d3a3a; /* Light gray background color */
+  }
     </Style>
   </head>
   <body>

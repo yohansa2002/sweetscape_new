@@ -1,3 +1,16 @@
+<style>
+  .content-wrapper {
+    background-color:  #3d3a3a; /* Light gray background color */
+  }
+
+  /* .card {
+    background-color: #525151; 
+    color: #949191;
+  } */
+</style>
+
+
+
 <div class="main-panel">
     <div class="content-wrapper">
       <div class="row">
@@ -112,7 +125,7 @@
               <div class="row">
                 <div class="col-9">
                   <div class="d-flex align-items-center align-self-start">
-                    <h3 class="mb-0">{{$total_processing}}</h3>
+                    <h3 class="mb-0">{{$total_cancelled}}</h3>
                     
                   </div>
                 </div>
@@ -122,7 +135,7 @@
                   </div>
                 </div>
               </div>
-              <h6 class="text-muted font-weight-normal">Processing Deliveries</h6>
+              <h6 class="text-muted font-weight-normal">Cancelled Orders</h6>
             </div>
           </div>
         </div>

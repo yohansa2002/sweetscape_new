@@ -25,7 +25,7 @@
     }
     .th_deg
     {
-        background-color: rgb(80, 76, 76)
+        background-color: rgb(61, 55, 55)
 
     }
     .img_size
@@ -36,6 +36,9 @@
 
     }
     
+    .content-wrapper {
+    background-color: #3d3a3a; /* Light gray background color */
+  }
 
     </style> 
   </head>

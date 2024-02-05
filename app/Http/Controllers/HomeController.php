@@ -39,7 +39,7 @@ class HomeController extends Controller
 
            
             $total_delivered = order::where('delivery_status','=','delivered')->get()->count();
-            $total_processing = order::where('delivery_status','=','processing')->get()->count();
+            $total_cancelled = order::where('delivery_status','=','cancelled')->get()->count();
             $total_payment = order::where('payment_status','=','paid')->get()->count();
             $payment_processing = order::where('payment_status','=','cash on delivery')->get()->count();
 
@@ -47,7 +47,7 @@ class HomeController extends Controller
 
 
             return view ('admin.home',compact('total_product','total_order','total_user','total_revenue'
-            ,'total_delivered','total_payment','total_processing','payment_processing'));
+            ,'total_delivered','total_payment','total_cancelled','payment_processing'));
         }
 
         else
@@ -275,6 +275,20 @@ class HomeController extends Controller
             return view('home.contact');
 
         }
+
+        public function subscribe_form ()
+        {
+            
+            return view('home.subscribe_form');
+
+        }
+
+
+        public function shop(Request $request)
+    {
+        $product=Product::all();
+        return view('home.shop',compact('product'));
+    }
 
     }
        
