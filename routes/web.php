@@ -49,7 +49,7 @@ Route::get('/delivered/{id}',[AdminController::class,'delivered']);
 Route::get('/send_email/{id}',[AdminController::class,'send_email']);
 Route::post('/send_user_email/{id}',[AdminController::class,'send_user_email']);
 Route::get('/search',[AdminController::class,'searchdata']);
-
+Route::get('/view_recipe',[AdminController::class,'view_recipe']);
 
 
 
@@ -68,7 +68,8 @@ Route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
 Route::get('/product_search',[HomeController::class,'product_search']);
 Route::get('/contact',[HomeController::class,'contact']);
 Route::get('/shop',[HomeController::class,'shop']);
-Route::get('/recipe',[HomeController::class,'recipe']);
+Route::get('/recipes',[HomeController::class,'recipes']);
+Route::get('/recipe_details',[HomeController::class,'recipe_details']);
 
 Route::get('/chat', [OpenAIController::class, 'index']);
 Route::post('/chat', [OpenAIController::class, 'getResponse']);

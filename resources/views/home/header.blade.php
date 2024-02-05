@@ -120,7 +120,7 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="{{url('/')}}" class="nav-item nav-link active">Home</a>
-                            <a href="{{url('/recipe')}}" class="nav-item nav-link">Recipes & Ideas</a>
+                            <a href="{{url('/recipes')}}" class="nav-item nav-link">Recipes & Ideas</a>
                             <a href="{{url('/shop')}}" class="nav-item nav-link">Shop</a>
                             <a href="{{url('/chat')}}" class="nav-item nav-link">Chat</a>
                             <a href="{{url('show_order')}}" class="nav-item nav-link">Order</a>

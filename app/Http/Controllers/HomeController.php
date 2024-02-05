@@ -299,9 +299,14 @@ class HomeController extends Controller
         return view('home.shop',compact('product'));
     }
         
-        public function recipe()
+        public function recipes()
         {
-            return view('home.recipe');
+            return view('home.recipes');
+        }
+
+        public function recipe_details()
+        {
+            return view('home.recipe_details');
         }
 
     }

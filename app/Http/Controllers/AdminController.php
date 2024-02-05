@@ -170,4 +170,10 @@ class AdminController extends Controller
         $order = order::where('name','LIKE',"%$searchText%")->orWhere('phone','LIKE',"%$searchText%")->orWhere('product_title','LIKE',"%$searchText%")->orWhere('user_id','LIKE',"%$searchText%")->get();
         return view('admin.order',compact('order'));
     }
+
+    public function view_recipe ()
+    {
+       ;
+        return view('admin.recipe');
+    }
 }
