@@ -53,7 +53,7 @@
             .about_us
             {
                 text-align: center;
-                color:rgb(250, 122, 143);
+                color:rgb(172, 134, 140);
                 
             }
             

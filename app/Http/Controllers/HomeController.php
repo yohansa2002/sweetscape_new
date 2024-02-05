@@ -26,11 +26,18 @@ class HomeController extends Controller
        
         if($usertype=='1')
         {
+
+            // $total_cakes = product::where('category','=','cake')->get()->count();
+
+            // $total_sweets = product::where('category','=','sweets')->get()->count();
+
+            // $total_equipments = product::where('category','=','bakery & equipments')->get()->count();
+
             $total_product = product ::all()->count();
             $total_order = order ::all()->count();
             $total_user = user ::all()->count();
             $order = order ::all();
-            $total_revenue = 0;
+            $total_revenue = 0;            
 
             foreach($order as $order)
             {
@@ -42,6 +49,8 @@ class HomeController extends Controller
             $total_cancelled = order::where('delivery_status','=','cancelled')->get()->count();
             $total_payment = order::where('payment_status','=','paid')->get()->count();
             $payment_processing = order::where('payment_status','=','cash on delivery')->get()->count();
+            
+
 
 
 
@@ -289,6 +298,11 @@ class HomeController extends Controller
         $product=Product::all();
         return view('home.shop',compact('product'));
     }
+        
+        public function recipe()
+        {
+            return view('home.recipe');
+        }
 
     }
        

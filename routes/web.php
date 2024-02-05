@@ -68,6 +68,7 @@ Route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
 Route::get('/product_search',[HomeController::class,'product_search']);
 Route::get('/contact',[HomeController::class,'contact']);
 Route::get('/shop',[HomeController::class,'shop']);
+Route::get('/recipe',[HomeController::class,'recipe']);
 
 Route::get('/chat', [OpenAIController::class, 'index']);
 Route::post('/chat', [OpenAIController::class, 'getResponse']);
