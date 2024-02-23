@@ -82,19 +82,21 @@
         @if(count($cart) > 0)
             <table>
                 <tr>
-                    <th class="th_deg">Product Title</th>
-                    <th class="th_deg">Product Quantity</th>
-                    <th class="th_deg">Price</th>
-                    <th class="th_deg">Image</th>
+                    <th class="th_deg"></th>
+                    <th class="th_deg">Product </th>
+                    <th class="th_deg">Quantity</th>
+                    <th class="th_deg">Amount</th>
+                   
                     <th class="th_deg">Action</th>
                 </tr>
                 
                 @foreach ($cart as $cart)
                 <tr>
+                    <td><img class="img_deg" src="/product/{{$cart->image}}"></td>
                     <td>{{$cart-> product_title}}</td>
                     <td>{{$cart-> quantity}}</td>
                     <td>LKR {{$cart-> price}}.00  </td>
-                    <td><img class="img_deg" src="/product/{{$cart->image}}"></td>
+                    
                     <td><a class ="btn btn-danger" onclick="return confirm ('Are you sure to remove this product ?')" 
                         href ="{{url('remove_cart', $cart->id)}}"> Remove </a></td>
                 </tr> 

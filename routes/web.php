@@ -70,6 +70,9 @@ Route::get('/contact',[HomeController::class,'contact']);
 Route::get('/shop',[HomeController::class,'shop']);
 Route::get('/recipes',[HomeController::class,'recipes']);
 Route::get('/recipe_details',[HomeController::class,'recipe_details']);
+Route::get('/recipe2',[HomeController::class,'recipe2']);
+Route::get('/recipe3',[HomeController::class,'recipe3']);
+
 
 Route::get('/chat', [OpenAIController::class, 'index']);
 Route::post('/chat', [OpenAIController::class, 'getResponse']);

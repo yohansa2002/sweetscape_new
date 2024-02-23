@@ -34,14 +34,24 @@
             /* grid-template-rows: repeat(3, 3fr);  */
             flex-wrap: wrap;
             gap: 5px;
+
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
             
-        }
+        
 
         .recipe-card {
-            background-color: #fff;
+            /* background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            overflow: hidden; */
+            width: 300px; /* Adjust width as needed */
+        height: 400px; /* Adjust height as needed */
+        border: 1px solid #ccc; /* Add border for better visibility */
+        border-radius: 10px; /* Optional: Add rounded corners */
+        padding: 20px; 
         }
 
         .recipe-card img {
@@ -52,8 +62,51 @@
 
         .recipe-card h3 {
             text-align: center;
-            margin: 10px 0;
+            margin: 10px 10px;
         }
+
+        .read-more-btn a {
+       
+        background-color: pink; /* Set background color to pink */
+        color: white; /* Set text color to white */
+        padding: 10px 11px; /* Add padding to the button */
+        /* text-decoration: none; Remove underline */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+        
+    }
+    .read-more-btn a:hover {
+        background-color: #ff66b3; /* Change background color on hover */
+    }
+
+    
+
+        .banner1 {
+            background-image: url('img/banner5.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 30px;
+            height: 300px; /* Fixed height for the banner */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #363535;
+            font-size: 24px;
+            border-top: 1px solid #ccc; /* Add border at the top */
+        }
+
+        .banner1_btn {
+            padding: 10px 20px;
+            background-color: rgb(250, 143, 161);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 40px;
+        }
+
     </style>
 </head>
 
@@ -61,22 +114,65 @@
      
     <!-- Topbar Start -->
     @include('home.header')
+
+
+    
                 
     <!-- resources/views/recipes/index.blade.php -->
 
 
      <div class="grid-container">
-       {{-- <div class="grid-item">
-            <img src="path/to/recipe1.jpg" alt="Recipe 1">
-            <h3>Recipe 1</h3>
-        </div>
-        <div class="read-more-btn" >
-            <a href="" class="read-more-btn">Read More</div>
-    </div> --}}
     
     <div class="recipe-card">
-        <img src="img/sweet2.jpg" alt="Recipe 2">
+        <img src="img/cake15new.jpg" alt="Recipe 2">
+        <h3>Butter Cake</h3>
+        <div class="recipe-details">
+           
+        </div>
+        <div class="read-more-btn" >
+             <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
+    </div>
+
+    <div class="recipe-card">
+        <img src="img/cake15.jpg" alt="Recipe 2">
+        <h3>ButterCream Frosting</h3>
+        <div class="recipe-details">
+           
+        </div>
+        <div class="read-more-btn" >
+             <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
+    </div>
+    
+    <div class="recipe-card">
+        <img src="img/cake25nw.jpg" alt="Recipe 2">
+        <h3>How to make Fondant</h3>
+        <div class="recipe-details">
+        
+        </div>
+        <div class="read-more-btn" >
+            <a href="{{url('recipe3')}}" class="read-more-btn">Read More</div>
+    </div>
+
+    <div class="recipe-card">
+        <img src="img/cake26.jpg" alt="Recipe 2">
+        <h3>Birthday Cake</h3>
+        <div class="recipe-details">
+        </div>
+        <div class="read-more-btn" >
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
+    </div>
+    <div class="recipe-card">
+        <img src="img/cake12.jpg" alt="Recipe 2">
         <h3>Chocolate Mug Cake</h3>
+        <div class="recipe-details">
+           
+        </div>
+        <div class="read-more-btn" >
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
+    </div>
+    <div class="recipe-card">
+        <img src="img/cake13.jpg" alt="Recipe 2">
+        <h3>Chocolate Lava Cake</h3>
         <div class="recipe-details">
            
         </div>
@@ -84,40 +180,85 @@
              <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
     </div>
     <div class="recipe-card">
-        <img src="img/sweet7.jpg" alt="Recipe 2">
-        <h3>Chocolate Lava Cake</h3>
+        <img src="img/cake11.jpg" alt="Recipe 2">
+        <h3>Butterscotch Cake</h3>
         <div class="recipe-details">
            
         </div>
         <div class="read-more-btn" >
-             <a href="" class="read-more-btn">Read More</div>
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
     </div>
     <div class="recipe-card">
-        <img src="img/sweet6.jpg" alt="Recipe 2">
-        <h3>Blueberry Muffin Pie</h3>
+        <img src="img/cake10.jpg" alt="Recipe 2">
+        <h3>Blueberry Muffin </h3>
         <div class="recipe-details">
         
         </div>
         <div class="read-more-btn" >
-             <a href="" class="read-more-btn">Read More</div>
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
     </div>
 
     <div class="recipe-card">
-        <img src="img/sweet10.jpg" alt="Recipe 2">
-        <h3>Butterscotch Cake</h3>
+        <img src="img/cake9.jpg" alt="Recipe 2">
+        <h3>Blueberry Cake</h3>
         <div class="recipe-details">
         </div>
         <div class="read-more-btn" >
-             <a href="" class="read-more-btn">Read More</div>
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
     </div>
     <div class="recipe-card">
-        <img src="img/sweet4.jpg" alt="Recipe 2">
-        <h3>How to make Macroons</h3>
+        <img src="img/cake17new.jpg" alt="Recipe 2">
+        <h3>Fruit Cake</h3>
         <div class="recipe-details">
            
         </div>
         <div class="read-more-btn" >
-             <a href="" class="read-more-btn">Read More</div>
+            <a href="{{url('recipe2')}}" class="read-more-btn">Read More</div>
+    </div>
+    <div class="recipe-card">
+        <img src="img/cake16.jpg" alt="Recipe 2">
+        <h3>Mini Cupcake</h3>
+        <div class="recipe-details">
+           
+        </div>
+        <div class="read-more-btn" >
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
+    </div>
+    <div class="recipe-card">
+        <img src="img/cake29.jpg" alt="Recipe 2">
+        <h3>Cookies</h3>
+        <div class="recipe-details">
+           
+        </div>
+        <div class="read-more-btn" >
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
+    </div>
+    <div class="recipe-card">
+        <img src="img/cake31.jpg" alt="Recipe 2">
+        <h3>Strawberry Milkshake</h3>
+        <div class="recipe-details">
+           
+        </div>
+        <div class="read-more-btn" >
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
+    </div>
+    <div class="recipe-card">
+        <img src="img/cake32.jpg" alt="Recipe 2">
+        <h3>Homemade Ice Cream</h3>
+        <div class="recipe-details">
+           
+        </div>
+        <div class="read-more-btn" >
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
+    </div>
+    <div class="recipe-card">
+        <img src="img/cake33.jpg" alt="Recipe 2">
+        <h3>Croissants</h3>
+        <div class="recipe-details">
+           
+        </div>
+        <div class="read-more-btn" >
+            <a href="{{url('recipe_details')}}" class="read-more-btn">Read More</div>
     </div>
     
 </div>
@@ -130,6 +271,15 @@
         }
     </script> --}}
 
+    <div class="banner1">
+        <div>
+            
+            <h2 style="color:#4e4d4d">Enhance your knowledge from the experts,
+                Check out more tutorials and guides..... </h2>
+            <a href="https://www.youtube.com/@HowToCakeIt" target="_blank" class="banner1_btn">Watch Now</a>
+        </div>
+    </div>
+   
             
           
   

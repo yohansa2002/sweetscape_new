@@ -63,31 +63,34 @@
     @include('home.header')
                 
     <div class="recipe-details">
-        <img src="img/cake15new.jpg" alt="Recipe 1">
+        <img src="img/cake17new.jpg" alt="Recipe 1">
         <p>
-            <h4 style="color:palevioletred">Butter Cake</h4>
+            <h4 style="color:palevioletred">Fruit Cake</h4>
            <ul
                <li>
                 <h4 style="color:palevioletred">Recipe Description:</h4>
-                <p>Butter cake is a moist, delicious cake that's easy to make and great for any occasion. This simple recipe is the perfect place to start for a beginner baker. It's a great cake for a birthday, or any day!</p>
+                <p> This fruit cake is a simple, easy, and effortless recipe that's perfect for the holiday season. It's a light and refreshing cake made with mixed dried fruit, applesauce, and warm spices. The best part is that it's a one-bowl recipe that takes just 10 minutes to prepare. So, you can have a cake in the oven in less than 15 minutes. The recipe is versatile and can be adapted to any dried fruit you have on hand. The cake is perfect on its own, but a dollop of whipped cream or a scoop of vanilla ice cream makes it a perfect dessert for any festive occasion.</p>
+                
                 <h4 style="color:palevioletred">Ingredients</h4>
-                <p>1 cup unsalted butter, softened</p>
-                <p>1 1/2 cups granulated sugar</p>
-                <p>2 large eggs</p>
-                <p>2 teaspoons vanilla extract</p>
-                <p>2 1/4 cups all-purpose flour</p>
-                <p>2 1/2 teaspoons baking powder</p>
-                <p>1/2 teaspoon salt</p>
-                <p>1 cup milk</p>
+                <p> 2 cups mixed dried fruit (such as raisins, currants, chopped dates, and chopped apricots)
+                <p> 1 cup unsweetened applesauce </p>
+                <p>    1 cup granulated sugar </p>
+                 <p>   1/2 cup unsalted butter, melted</p>
+                    <p>   2 cups all-purpose flour</p>
+                        <p> 1 teaspoon baking soda</p>
+                            <p>1 teaspoon ground cinnamon</p>
+                                <p>    1/2 teaspoon ground nutmeg</p>
+                                    <p>    1/2 teaspoon ground cloves</p>
+                                        <p>    1/2 teaspoon salt</p>
+                                            <p>    1/2 cup chopped nuts (optional)</p>
                 <h4 style="color:palevioletred">Instructions</h4>
-                <p>    Preheat your oven to 350°F (175°C). Grease and flour a 9x5-inch loaf pan.
-                    In a large mixing bowl, cream together the butter and sugar until light and fluffy.
-                    Add the eggs one at a time, beating well after each addition. Stir in the vanilla extract.
-                    In a separate bowl, sift together the flour, baking powder, and salt.
-                    Gradually add the dry ingredients to the butter mixture, alternating with the milk.
+                <p>       Preheat your oven to 350°F (175°C). Grease and flour a 9x5-inch loaf pan.
+                    In a large mixing bowl, combine the dried fruit, applesauce, sugar, and melted butter.
+                    In a separate bowl, whisk together the flour, baking soda, cinnamon, nutmeg, cloves, and salt.
+                    Gradually add the dry ingredients to the fruit mixture, stirring until well combined. Fold in the chopped nuts, if using.
                     Pour the batter into the prepared loaf pan.
                     Bake for 50-60 minutes, or until a toothpick inserted into the center comes out clean.
-                    Allow the cake to cool in the pan for 10 minutes before transferring it to a wire rack to cool completely.</p>
+                    Let the cake cool in the pan for 10 minutes before transferring it to a wire rack to cool completely.</p>
            </ul>
         </p>
 

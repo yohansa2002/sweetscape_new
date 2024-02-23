@@ -95,6 +95,7 @@
         </div>
     </div> --}}
     <!-- Vendor End -->
+    @include('home.location')
 
 
     <!-- Footer Start -->

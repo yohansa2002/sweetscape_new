@@ -63,32 +63,36 @@
     @include('home.header')
                 
     <div class="recipe-details">
-        <img src="img/cake15new.jpg" alt="Recipe 1">
+        <img src="img/cake25nw.jpg" alt="Recipe 1">
         <p>
             <h4 style="color:palevioletred">Butter Cake</h4>
            <ul
                <li>
                 <h4 style="color:palevioletred">Recipe Description:</h4>
-                <p>Butter cake is a moist, delicious cake that's easy to make and great for any occasion. This simple recipe is the perfect place to start for a beginner baker. It's a great cake for a birthday, or any day!</p>
+                <p> Fondant is a versatile sugar dough that can be used to cover cakes, create decorations, and mold figures and shapes. It has a smooth, pliable texture that can be rolled out and shaped to create a variety of cake designs. This homemade fondant recipe is made with just a few simple ingredients and is easy to work with, making it perfect for both beginner and experienced bakers. </p>
+                
                 <h4 style="color:palevioletred">Ingredients</h4>
-                <p>1 cup unsalted butter, softened</p>
-                <p>1 1/2 cups granulated sugar</p>
-                <p>2 large eggs</p>
-                <p>2 teaspoons vanilla extract</p>
-                <p>2 1/4 cups all-purpose flour</p>
-                <p>2 1/2 teaspoons baking powder</p>
-                <p>1/2 teaspoon salt</p>
-                <p>1 cup milk</p>
+                <p>    1 package (about 16 ounces) mini marshmallows </p>
+                <p>    2 tablespoons water </p>
+                <p>    2 pounds (about 8 cups) powdered sugar (also known as confectioners' sugar), sifted </p>
+                <p>    Vegetable shortening or powdered sugar for dusting </p>
                 <h4 style="color:palevioletred">Instructions</h4>
-                <p>    Preheat your oven to 350°F (175°C). Grease and flour a 9x5-inch loaf pan.
-                    In a large mixing bowl, cream together the butter and sugar until light and fluffy.
-                    Add the eggs one at a time, beating well after each addition. Stir in the vanilla extract.
-                    In a separate bowl, sift together the flour, baking powder, and salt.
-                    Gradually add the dry ingredients to the butter mixture, alternating with the milk.
-                    Pour the batter into the prepared loaf pan.
-                    Bake for 50-60 minutes, or until a toothpick inserted into the center comes out clean.
-                    Allow the cake to cool in the pan for 10 minutes before transferring it to a wire rack to cool completely.</p>
-           </ul>
+                <p>       In a microwave-safe bowl, combine the mini marshmallows and water.
+                    Microwave the marshmallows in 30-second intervals, stirring in between each interval, until the marshmallows are completely melted and smooth. Be careful not to overheat the marshmallows.
+                    Once the marshmallows are melted, gradually add sifted powdered sugar to the bowl, stirring with a spatula or wooden spoon. Continue adding powdered sugar until the mixture becomes too stiff to stir.
+                    Turn the mixture out onto a clean work surface dusted with powdered sugar or coated with vegetable shortening to prevent sticking.
+                    Knead the fondant mixture like you would knead dough, incorporating more powdered sugar as needed to achieve a smooth, pliable consistency. Keep kneading until the fondant is no longer sticky and has a smooth texture.
+                    Once the fondant is smooth and pliable, shape it into a ball and wrap it tightly in plastic wrap. Let the fondant rest at room temperature for at least 30 minutes before using it to cover cakes or create decorations.
+                    When ready to use, roll out the fondant on a clean, powdered sugar-dusted surface to the desired thickness and size needed for covering your cake or creating decorations.</p>
+                
+                    <h4 style="color:palevioletred">Tips to work with Fondant</h4>
+                    <p>
+                        Keep your work surface and rolling pin dusted with powdered sugar to prevent sticking.
+    If the fondant becomes too dry while working with it, you can knead in a small amount of vegetable shortening to soften it.
+    To add color to fondant, knead in gel or paste food coloring until the desired shade is achieved. Liquid food coloring can affect the consistency of the fondant.
+    Fondant decorations can be made in advance and stored in an airtight container at room temperature until ready to use.</p>
+           
+                </ul>
         </p>
 
         

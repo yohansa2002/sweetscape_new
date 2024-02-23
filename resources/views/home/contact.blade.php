@@ -56,6 +56,36 @@
                 color:rgb(172, 134, 140);
                 
             }
+
+            .banner {
+            background-image: url('img/banner7.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: 300px; /* Fixed height for the banner */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #4e4c4c;
+            font-size: 24px;
+            border-top: 1px solid #ccc; /* Add border at the top */
+        }
+
+        .banner button {
+            padding: 10px 20px;
+            background-color: rgb(250, 143, 161);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .banner button:hover {
+            background-color: #d6469a;
+        }
             
             </style>
     </head>
@@ -101,6 +131,15 @@
             </div>
         </div>
     </div>
+    <div class="banner">
+        <div>
+            <h2>The Bake School Community</h2>
+            <p>Join our community to get access to exclusive recipes, tips, and more!</p>
+            <p>A space for bakers and baking enthusiasts to share and learn from each other.</p>
+            <button disabled>Join Now</button> <!-- Disabled button -->
+        </div>
+    </div>
+
     <div class="contact_main">
             <div class="text-center mb-4">
                 <h2 class="section-title px-5"><span class="px-2">Contact For Any Queries</span></h2>
@@ -132,7 +171,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Send
+                                <button style=" background-color: rgb(250, 143, 161)" type="submit">Send
                                     Message</button>
                             </div>
                         </form>
@@ -167,10 +206,14 @@
                         <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
+    
+    @include('home.location')
+    
   
        
     

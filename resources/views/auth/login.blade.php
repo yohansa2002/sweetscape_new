@@ -1,8 +1,39 @@
-<x-guest-layout>
-    <x-authentication-card>
+<head>
+    <meta charset="utf-8">
+    <title>SweetScape</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="home/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="home/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="home/css/style.css" rel="stylesheet">
+</head>
+<x-guest-layout style="background-color: pink;">
+    <x-authentication-card style="max-width: 400px; margin: 0 auto;">
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            {{-- <x-authentication-card-logo /> --}}
+            
+                <div class="col-lg-3 d-none d-lg-block">
+                    <a href="" class="text-decoration-none">
+                        <h1 class="m-0 display-20 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">Sweet</span>Scape</h1>
+                    </a>
+                </div>
         </x-slot>
+
+        <h2 style="text-align: center; margin-bottom: 20px; font-size: 24px; color:rgb(248, 139, 157)">Login to SweetScape</h2>
 
         <x-validation-errors class="mb-4" />
 
@@ -39,7 +70,7 @@
                     </a>
                 @endif
 
-                <x-button class="ml-4">
+                <x-button class="ml-4" style="background-color: #f368ad; color: white;">
                     {{ __('Log in') }}
                 </x-button>
             </div>

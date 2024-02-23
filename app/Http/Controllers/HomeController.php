@@ -308,6 +308,15 @@ class HomeController extends Controller
         {
             return view('home.recipe_details');
         }
+        public function recipe2()
+        {
+            return view('home.recipe2');
+        }
+
+        public function recipe3()
+        {
+            return view('home.recipe3');
+        }
 
     }
        

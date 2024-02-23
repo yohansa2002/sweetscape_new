@@ -3,10 +3,10 @@
     background-color:  #3d3a3a; /* Light gray background color */
   }
 
-  /* .card {
-    background-color: #525151; 
+  .card {
+    
     color: #949191;
-  } */
+  }
 </style>
 
 
